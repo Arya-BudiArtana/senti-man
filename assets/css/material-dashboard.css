@@ -23162,7 +23162,7 @@ hr.horizontal.gray-light {
 .navbar-vertical .navbar-brand-img {
   max-width: 100%;
   height: 18rem;
-  padding-top: 0;
+  margin-top: 0;
   padding-bottom: 8em;
   padding-left: 3em;
 }
@@ -23172,6 +23172,7 @@ hr.horizontal.gray-light {
   padding-right: 1rem;
   font-weight: 300;
   color: #fff;
+  
 }
 
 .navbar-vertical .navbar-nav .nav-link>i {
@@ -23992,7 +23993,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
 
 .sidenav-header {
   height: 8rem;
-  padding-top: 0;
+  margin-bottom: 2em;
 }
 
 .sidenav-footer .card.card-background:after {
