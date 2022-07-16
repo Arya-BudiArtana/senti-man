@@ -2631,7 +2631,7 @@ progress {
 }
 
 @media (max-width: 575.98px) {
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2;
     padding-left: 0.2em;
@@ -11595,7 +11595,7 @@ fieldset:disabled .btn {
     margin-top: 16rem !important;
     margin-bottom: 16rem !important;
   }
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2;
     padding-left: 0.2em;
@@ -12764,7 +12764,7 @@ fieldset:disabled .btn {
 }
 
 @media (min-width: 768px) {
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2;
     padding-left: 0.2em;
@@ -14552,7 +14552,7 @@ fieldset:disabled .btn {
 }
 
 @media (min-width: 992px) {
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2;
     padding-left: 0.2em;
@@ -16340,7 +16340,7 @@ fieldset:disabled .btn {
 }
 
 @media (min-width: 1200px) {
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2;
     padding-left: 0.2em;
@@ -21399,7 +21399,7 @@ body.dark-version {
 }
 
 @media (min-width: 992px) {
-  .title span {
+  .title1 span {
     background-color:var(--bs-pink);
     line-height:2px;
     padding-left: 0.2em;

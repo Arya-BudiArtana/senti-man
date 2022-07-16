@@ -34,6 +34,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="assets/css/material-dashboard.css?v=3.0.2" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -253,7 +257,7 @@
                   <h6 class="text-white text-capitalize ps-3">Dashboard</h6>
                 </div>
               </div>
-              <h1 class="title">Cek sentiment masyarakat dengan <span>sekali klik</span></h1>
+              <h3 class="title1 text-center" style="margin-top: 20px;">Cek sentiment masyarakat dengan <span>sekali klik</span></h3>
               <!-- <h1 class="subtitle">Ketik kata kunci yang ingin Anda cari dan lihat prediksi sentimen dengan bantuan AI</h1> -->
               <hr class="dark horizontal">
               <div class="Checkbox">                    
@@ -274,20 +278,23 @@
                   <span class="checkmark"></span>
                 </label>           
           </div>
-          <div class=" me-md-auto d-flex align-items-center ps-5 pb-3 pt-5">
-            <div class="input-group input-group-outline w-60 pe-3">
-              <input type="text" class="form-control" placeholder="Cari di sini...">
-              
-            </div>
-            <div class="pe-2">
-            <input type="text" name="datefilter" placeholder="Rentang Waktu" class="p-2 pe-2"/>
-
-            </div>
-            <div>
-            <button class="btn-pencarian">Mulai</button>
-
-            </div>
-          </div>  
+          
+          <form action="">
+            <div class=" me-md-auto d-flex align-items-center ps-5 pb-3 pt-5 flex-wrap">
+              <div class="input-group input-group-outline w-60 pe-3 pt-3">
+                <input type="text" class="form-control" placeholder="Cari di sini...">
+                
+              </div>
+              <div class="pe-2 pt-3">
+              <input type="text" name="datefilter" placeholder="Rentang Waktu" class="p-2"/>
+  
+              </div>
+              <div class="pt-3">
+              <button type="submit" class="btn-pencarian">Mulai</button>
+  
+              </div>
+            </div> 
+          </form>  
         </div>
       </div>
       <div class="row mb-4">
@@ -868,6 +875,26 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.min.js?v=3.0.2"></script>
+  <script type="text/javascript">
+    $(function() {
+    
+      $('input[name="datefilter"]').daterangepicker({
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+    
+      $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+      });
+    
+      $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+    
+    });
+    </script>
 </body>
 
 </html>
