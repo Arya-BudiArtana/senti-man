@@ -27609,7 +27609,7 @@ textarea {
 }
 
 
-.loader {
+/* .loader {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -27690,5 +27690,90 @@ textarea {
   }
   100% {
     transform: scale(1);
+  }
+} */
+
+
+.loader {
+  background: #111111;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.loader-inner {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.loading-spinner {
+  width: 100px;
+  height: 100px;
+  animation: spinner-rotate 2s ease-in-out infinite;
+  -webkit-animation: spinner-rotate 2s ease-in-out infinite;
+  -moz-animation: spinner-rotate 2s ease-in-out infinite;
+  -ms-animation: spinner-rotate 2s ease-in-out infinite;
+  -o-animation: spinner-rotate 2s ease-in-out infinite;
+}
+.spinner {
+  animation: spinner-color 8s ease-in-out infinite, spinner-dash 2s ease-in-out infinite;
+  -webkit-animation: spinner-color 8s ease-in-out infinite, spinner-dash 2s ease-in-out infinite;
+  -moz-animation: spinner-color 8s ease-in-out infinite, spinner-dash 2s ease-in-out infinite;
+  -ms-animation: spinner-color 8s ease-in-out infinite, spinner-dash 2s ease-in-out infinite;
+  -o-animation: spinner-color 8s ease-in-out infinite, spinner-dash 2s ease-in-out infinite;
+  stroke-linecap: round;
+}
+@keyframes spinner-rotate {
+  100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: trotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+  }
+}
+@keyframes spinner-color {
+  0%, 100% {
+      stroke: rgb(0,97,215);
+  }
+  20% {
+      stroke: rgb(106,206,231);
+  }
+  40% {
+      stroke: rgb(0,97,215);
+  }
+  60% {
+      stroke: rgb(106,206,231);
+  }
+  80% {
+      stroke: rgb(0,97,215);
+  }
+  100% {
+      stroke: rgb(106,206,231);
+  }
+}
+@keyframes spinner-dash {
+  0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+  }
+  50% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -35px;
+  }
+  100% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -125px;
   }
 }
