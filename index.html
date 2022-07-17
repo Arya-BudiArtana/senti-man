@@ -46,6 +46,13 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
+  <div class="loader" id="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
   <aside
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
     id="sidenav-main" style="padding-top: 0em;">
@@ -281,7 +288,7 @@
               <form action="">
                 <div class="Checkbox">
                   <label class="container">Twitter
-                    <input type="checkbox">
+                    <input type="checkbox" class="form">
                     <span class="checkmark"></span>
                   </label>
                   <label class="container">Facebook
@@ -941,6 +948,22 @@
       $('#myTable').DataTable();
     });
   </script>
+
+<script>
+  document.onreadystatechange = function() {
+      if (document.readyState !== "complete") {
+          document.querySelector(
+            "body").style.visibility = "hidden";
+          document.querySelector(
+            "#loader").style.visibility = "visible";
+      } else {
+          document.querySelector(
+            "#loader").style.display = "none";
+          document.querySelector(
+            "body").style.visibility = "visible";
+      }
+  };
+</script>
 </body>
 
 </html>
